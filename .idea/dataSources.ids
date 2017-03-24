@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - calc@localhost" uuid="9f4625b1-4981-4358-b5ed-6f0933b2c9ff">
+    <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="nk"/>
+    <table name="nerefd_commentmeta" schema="" catalog="nk" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="comment_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="comment_id" unique="false" columns="comment_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+    </table>
+    <table name="nerefd_comments" schema="" catalog="nk" type="TABLE">
+      <column name="comment_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="comment_post_ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="comment_author" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="comment_author_email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_author_url" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_author_IP" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="comment_date_gmt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="comment_content" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="comment_karma" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="comment_approved" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="JzEn"/>
+      <column name="comment_agent" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_parent" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="user_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="comment_ID"/>
+      <index name="comment_approved_date_gmt" unique="false" columns="comment_approved,comment_date_gmt"/>
+      <index name="comment_author_email" unique="false" columns="comment_author_email"/>
+      <index name="comment_date_gmt" unique="false" columns="comment_date_gmt"/>
+      <index name="comment_parent" unique="false" columns="comment_parent"/>
+      <index name="comment_post_ID" unique="false" columns="comment_post_ID"/>
+    </table>
+    <table name="nerefd_links" schema="" catalog="nk" type="TABLE">
+      <column name="link_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="link_url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_image" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_target" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_visible" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J1kn"/>
+      <column name="link_owner" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MQ=="/>
+      <column name="link_rating" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="link_updated" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="link_rel" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="link_notes" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="link_rss" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="link_id"/>
+      <index name="link_visible" unique="false" columns="link_visible"/>
+    </table>
+    <table name="nerefd_options" schema="" catalog="nk" type="TABLE">
+      <column name="option_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="option_name" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="option_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="autoload" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J3llcyc="/>
+      <primary-key name="PRIMARY" columns="option_id"/>
+      <index name="option_name" unique="true" columns="option_name"/>
+    </table>
+    <table name="nerefd_postmeta" schema="" catalog="nk" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="post_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="post_id" unique="false" columns="post_id"/>
+    </table>
+    <table name="nerefd_posts" schema="" catalog="nk" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="post_author" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="post_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_date_gmt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_title" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_excerpt" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J3B1Ymxpc2gn"/>
+      <column name="comment_status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J29wZW4n"/>
+      <column name="ping_status" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J29wZW4n"/>
+      <column name="post_password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="post_name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="to_ping" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="pinged" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_modified" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_modified_gmt" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="post_content_filtered" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="post_parent" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="guid" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="menu_order" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="post_type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12" def="J3Bvc3Qn"/>
+      <column name="post_mime_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <index name="post_author" unique="false" columns="post_author"/>
+      <index name="post_name" unique="false" columns="post_name"/>
+      <index name="post_parent" unique="false" columns="post_parent"/>
+      <index name="type_status_date" unique="false" columns="post_type,post_status,post_date,ID"/>
+    </table>
+    <table name="nerefd_revslider_css" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="handle" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="settings" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="hover" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="params" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="advanced" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="nerefd_revslider_layer_animations" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="handle" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="params" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="settings" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="nerefd_revslider_navigations" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="handle" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <column name="css" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="markup" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="settings" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="true" jdbcType="-1"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="nerefd_revslider_sliders" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="TINYTEXT" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="alias" sqlType="TINYTEXT" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="params" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="settings" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="type" sqlType="VARCHAR" precision="191" scale="0" nullable="false" jdbcType="12"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="nerefd_revslider_slides" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="slider_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="slide_order" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="params" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="layers" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="settings" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="nerefd_revslider_static_slides" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="slider_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="params" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="layers" sqlType="MEDIUMTEXT" precision="16777215" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="settings" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="nerefd_term_relationships" schema="" catalog="nk" type="TABLE">
+      <column name="object_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="term_taxonomy_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="term_order" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="object_id,term_taxonomy_id"/>
+      <index name="term_taxonomy_id" unique="false" columns="term_taxonomy_id"/>
+    </table>
+    <table name="nerefd_term_taxonomy" schema="" catalog="nk" type="TABLE">
+      <column name="term_taxonomy_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="term_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="taxonomy" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="parent" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="count" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="term_taxonomy_id"/>
+      <index name="term_id_taxonomy" unique="true" columns="term_id,taxonomy"/>
+      <index name="taxonomy" unique="false" columns="taxonomy"/>
+    </table>
+    <table name="nerefd_termmeta" schema="" catalog="nk" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="term_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="term_id" unique="false" columns="term_id"/>
+    </table>
+    <table name="nerefd_terms" schema="" catalog="nk" type="TABLE">
+      <column name="term_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="slug" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="term_group" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="term_order" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="term_id"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="slug" unique="false" columns="slug"/>
+    </table>
+    <table name="nerefd_usermeta" schema="" catalog="nk" type="TABLE">
+      <column name="umeta_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="umeta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="nerefd_users" schema="" catalog="nk" type="TABLE">
+      <column name="ID" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_login" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_pass" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_nicename" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_url" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_registered" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="user_activation_key" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="user_status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="display_name" sqlType="VARCHAR" precision="250" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="ID"/>
+      <index name="user_email" unique="false" columns="user_email"/>
+      <index name="user_login_key" unique="false" columns="user_login"/>
+      <index name="user_nicename" unique="false" columns="user_nicename"/>
+    </table>
+    <table name="nerefd_woocommerce_api_keys" schema="" catalog="nk" type="TABLE">
+      <column name="key_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="permissions" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="consumer_key" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1"/>
+      <column name="consumer_secret" sqlType="CHAR" precision="43" scale="0" nullable="false" jdbcType="1"/>
+      <column name="nonces" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="truncated_key" sqlType="CHAR" precision="7" scale="0" nullable="false" jdbcType="1"/>
+      <column name="last_access" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="key_id"/>
+      <index name="consumer_key" unique="false" columns="consumer_key"/>
+      <index name="consumer_secret" unique="false" columns="consumer_secret"/>
+    </table>
+    <table name="nerefd_woocommerce_attribute_taxonomies" schema="" catalog="nk" type="TABLE">
+      <column name="attribute_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="attribute_name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="attribute_label" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="attribute_type" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="attribute_orderby" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="attribute_public" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="attribute_id"/>
+      <index name="attribute_name" unique="false" columns="attribute_name"/>
+    </table>
+    <table name="nerefd_woocommerce_downloadable_product_permissions" schema="" catalog="nk" type="TABLE">
+      <column name="permission_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="download_id" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="product_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="order_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="order_key" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_email" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="downloads_remaining" sqlType="VARCHAR" precision="9" scale="0" nullable="true" jdbcType="12"/>
+      <column name="access_granted" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="access_expires" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="download_count" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <primary-key name="PRIMARY" columns="permission_id"/>
+      <index name="download_order_key_product" unique="false" columns="product_id,order_id,order_key,download_id"/>
+      <index name="download_order_product" unique="false" columns="download_id,order_id,product_id"/>
+    </table>
+    <table name="nerefd_woocommerce_order_itemmeta" schema="" catalog="nk" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="order_item_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="order_item_id" unique="false" columns="order_item_id"/>
+    </table>
+    <table name="nerefd_woocommerce_order_items" schema="" catalog="nk" type="TABLE">
+      <column name="order_item_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="order_item_name" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="order_item_type" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="order_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="order_item_id"/>
+      <index name="order_id" unique="false" columns="order_id"/>
+    </table>
+    <table name="nerefd_woocommerce_payment_tokenmeta" schema="" catalog="nk" type="TABLE">
+      <column name="meta_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="payment_token_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="meta_key" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="meta_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="meta_id"/>
+      <index name="meta_key" unique="false" columns="meta_key"/>
+      <index name="payment_token_id" unique="false" columns="payment_token_id"/>
+    </table>
+    <table name="nerefd_woocommerce_payment_tokens" schema="" catalog="nk" type="TABLE">
+      <column name="token_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="gateway_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="token" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="user_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="is_default" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="token_id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="nerefd_woocommerce_sessions" schema="" catalog="nk" type="TABLE">
+      <column name="session_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="session_key" sqlType="CHAR" precision="32" scale="0" nullable="false" jdbcType="1"/>
+      <column name="session_value" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="session_expiry" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="session_key"/>
+      <index name="session_id" unique="true" columns="session_id"/>
+    </table>
+    <table name="nerefd_woocommerce_shipping_zone_locations" schema="" catalog="nk" type="TABLE">
+      <column name="location_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="zone_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="location_code" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="location_type" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="location_id"/>
+      <index name="location_id" unique="false" columns="location_id"/>
+      <index name="location_type" unique="false" columns="location_type"/>
+      <index name="location_type_code" unique="false" columns="location_type,location_code"/>
+    </table>
+    <table name="nerefd_woocommerce_shipping_zone_methods" schema="" catalog="nk" type="TABLE">
+      <column name="zone_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="instance_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="method_id" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="method_order" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_enabled" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="instance_id"/>
+    </table>
+    <table name="nerefd_woocommerce_shipping_zones" schema="" catalog="nk" type="TABLE">
+      <column name="zone_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="zone_name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="zone_order" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="zone_id"/>
+    </table>
+    <table name="nerefd_woocommerce_tax_rate_locations" schema="" catalog="nk" type="TABLE">
+      <column name="location_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="location_code" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tax_rate_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="location_type" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="location_id"/>
+      <index name="location_type" unique="false" columns="location_type"/>
+      <index name="location_type_code" unique="false" columns="location_type,location_code"/>
+      <index name="tax_rate_id" unique="false" columns="tax_rate_id"/>
+    </table>
+    <table name="nerefd_woocommerce_tax_rates" schema="" catalog="nk" type="TABLE">
+      <column name="tax_rate_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="tax_rate_country" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tax_rate_state" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tax_rate" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tax_rate_name" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="tax_rate_priority" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="tax_rate_compound" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tax_rate_shipping" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MQ=="/>
+      <column name="tax_rate_order" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="tax_rate_class" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="tax_rate_id"/>
+      <index name="tax_rate_class" unique="false" columns="tax_rate_class"/>
+      <index name="tax_rate_country" unique="false" columns="tax_rate_country"/>
+      <index name="tax_rate_priority" unique="false" columns="tax_rate_priority"/>
+      <index name="tax_rate_state" unique="false" columns="tax_rate_state"/>
+    </table>
+    <table name="nerefd_wsluserscontacts" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="provider" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="identifier" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="full_name" sqlType="VARCHAR" precision="150" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="profile_url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="photo_url" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <index name="id" unique="true" columns="id"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="nerefd_wslusersprofiles" schema="" catalog="nk" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="provider" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="object_sha" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="identifier" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="profileurl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="websiteurl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="photourl" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="displayname" sqlType="VARCHAR" precision="150" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="firstname" sqlType="VARCHAR" precision="150" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastname" sqlType="VARCHAR" precision="150" scale="0" nullable="false" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="language" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="age" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="birthday" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="birthmonth" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="birthyear" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="emailverified" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="75" scale="0" nullable="false" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="country" sqlType="VARCHAR" precision="75" scale="0" nullable="false" jdbcType="12"/>
+      <column name="region" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="city" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="zip" sqlType="VARCHAR" precision="25" scale="0" nullable="false" jdbcType="12"/>
+      <index name="id" unique="true" columns="id"/>
+      <index name="provider" unique="false" columns="provider"/>
+      <index name="user_id" unique="false" columns="user_id"/>
+    </table>
+  </data-source>
+</component>

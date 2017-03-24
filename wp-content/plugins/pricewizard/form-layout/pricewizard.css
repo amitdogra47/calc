@@ -1,0 +1,51 @@
+/*
+Styles for Price Wizard plugin
+*/
+/* *{margin:0; text-decoration:none;padding:0;outline:none;font-family: Verdana, Geneva, sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-weight: 300;}*/
+
+#pw-wrapper{width:1003px; height:700px; display:block; margin-left:auto;margin-right:auto;}
+#pw-outer{width:100%; height:auto; display:block; float:left; margin:10px 0px 10px 0px;background:white;-webkit-box-shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.2);box-shadow:0px 1px 3px 0px rgba(0, 0, 0, 0.2);}
+#pw-inner{width:100%; padding:5px 20px 20px 20px; float:left; height:auto;-moz-box-sizing: border-box;-webkit-box-sizing:border-box;box-sizing: border-box;}
+#pw-inner table{border-bottom: 0px solid transparent;margin: 0px;}
+#pw-inner td{border:0px; padding:0px;}
+#pw-inner img{border:0px solid white;-webkit-box-shadow:  0px 0px 0px 0px rgba(0, , 0, 0.5);box-shadow:  0px 0px 0px 0px rgba(0, , 0, 0.5);}
+#pw-inner ul,ol{margin:8px 40px;font-size:14px;}
+#pw-inner li {font-size:11px;}
+#pw-inner li a{color:#007BC3;}
+
+.landing-page-type-1 {border:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;background:#FFF !important;}
+.landing-page-type-1 #pw-inner {background:#FFF;padding:5px 20px 20px 20px;min-height:300px;}
+
+
+/* basic styles */
+#mypriceguide img{	border:0px solid white;-webkit-box-shadow: 0px 0px 0px 0px rgba(0, , 0, 0.5);box-shadow:  0px 0px 0px 0px rgba(0, , 0, 0.5);}
+
+/* layout of the prospect details */
+#mypriceguide input.myschool[type='text'] {
+	width: 400px;
+}
+#mypriceguide input.myname[type='text'] {
+	width: 400px;
+}
+#mypriceguide input.myemail[type='text'] {
+	width: 400px;
+}
+#mypriceguide input.myphone[type='text'] {
+	width: 200px;
+}
+
+/* layut for validation errors */
+div.rsvErrors1{background-color: #FFFFCC;border: 1px solid red;}
+div.rsvErrors1 h4{margin: 5px;}
+div.rsvErrors1 ol li {list-style-type: disc;margin-left: 20px;}
+div.rsvErrors1 {display: none}
+
+/* general settings */
+.wizard_text {
+line-height:150% !important;
+}
+.wizard_header{
+font-size:16px !important;
+font-weight:bold !important;
+padding-left:10px !important;
+}

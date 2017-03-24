@@ -1,0 +1,424 @@
+/*main stylesheet*/
+
+@import url('bootstrap.min.css');
+
+
+
+/*==================================================
+				google fonts 
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	background:#fff;
+}
+
+.mainheading{
+    font-size: 24px;
+    background: #f6891f;
+    padding: 15px 25px;
+	color:#fff;
+	margin-top:0;
+	
+}
+
+.nwcon{
+	display:inline-block !important;
+}
+
+.mainheading-1{
+	background:#dcddde;
+	color:#000;
+	    padding: 10px 25px;
+    font-size: 24px;
+}
+
+.toptile{
+	font-size:20px;
+	padding-top:15px;	
+	padding-bottom:15px;
+	font-weight:400;
+}
+
+.circle{
+    padding: 6px 14px;
+    border-radius: 100%;
+    background: #F7941E;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 800;
+    margin-right: 25px;
+}
+
+.fombox-1{
+	padding-top:25px;
+}
+
+.fmrow{
+	padding-bottom:15px;
+}
+
+.fmrow label{
+	padding-right:0px;
+	font-size:20px;
+	font-weight:400;
+	display:block;
+}
+
+.fmrow input[type="text"],
+.fmrow input[type="email"],
+.fmrow input[type="tel"]{
+	width:100%;
+	padding:7px 15px;
+}
+
+.fmrow select{
+	width:80%;
+	padding:7px 15px;
+}
+
+.fanyopton select{
+	width:90%;
+}
+
+.g-recaptcha div{
+	width: 100% !important;
+}
+
+.infospan{
+	    font-size: 25px;
+	padding-left:10px;
+	cursor:pointer;
+	opacity: 0.9 !important;
+}
+
+.fscpaper{
+	display:inline-block !important;
+}
+
+
+.covertype{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.covertype img{
+	max-width:100%;
+}
+
+
+.bndin{
+	font-size:30px;
+	padding:20px 0;
+	padding-top:0;
+}
+
+.box{
+	display:block;
+}
+
+.osmlk input[type="text"]{
+	width:88%;
+}
+
+
+.qotoion{
+	/*background:#fee3c9;
+	padding:40px 20px;
+	border:1px solid #f6891f;*/
+	margin-top:9px;
+	padding-top: 10px;
+    padding-bottom: 28px;
+}
+
+.onsintn{
+	font-size:25px;
+} 
+
+.emqu{ 
+	padding-right:10px;
+}
+
+ 
+.nwson{ 
+	top: 2px !important;
+}
+
+/*.disbutton{
+	background:#f6891f;
+	padding:15px 40px;
+	font-weight:800;
+	font-size:35px;
+	text-transform:uppercase;
+	border:none;
+	color:#fff;
+	margin-top:40px;
+	border-radius:8px;
+	outline:none;
+
+}
+
+.disbuttond {
+    background: #cecece;
+    padding: 15px 40px;
+    font-weight: 800;
+    font-size: 35px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 8px;
+    outline: none;
+
+}*/
+
+
+.fombox-1 .disbuttond {
+    background: #cecece;
+    padding: 15px 40px;
+    font-weight: 800;
+    font-size: 35px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 8px;
+    outline: none;
+
+}
+
+.fombox-1 .disbutton {
+    background: #f6891f;
+    padding: 15px 40px;
+    font-weight: 800;
+    font-size: 35px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.fombox-1 .disbutton:hover{
+	background:#000;
+}
+
+.fombox-1 .disbuttond:hover {
+    background: #cecece;
+}
+.smallinfo{
+    font-size: 12px;
+    color: #ff0000;
+}
+.instr{
+	padding:20px 0;
+	padding-top:10px;
+	font-size:18px;
+	color:gray;
+}
+
+/*=======================customer radioi button css ====================*/
+
+.otiondiv{
+	padding-top:30px;
+}
+
+
+
+
+
+.control-group {
+	display: inline-block;
+	width: 200px;
+	height: 210px;
+	margin: 10px;
+	padding: 30px;
+	text-align: left;
+	vertical-align: top;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.control {
+	font-size: 18px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+    background: #fff;
+    border: 1px solid #f7941e;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	    background: #fff;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+    background: #f7941e;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	    background: #f6891f;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+	pointer-events: none;
+	opacity: .6;
+	background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+	top: 4px;
+	left: 8px;
+	width: 3px;
+	height: 8px;
+	transform: rotate(45deg);
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator:after {
+	background: #7b7b7b;
+}
+
+.qotoion .control__indicator{
+	left:48%;
+}
+
+.tooltip-inner{
+	    background-color: #f6891f;
+		text-align:left;
+}
+
+.tooltip.top .tooltip-arrow{
+	border-top-color: #f6891f;
+}
+
+/*captacha responsive code*/
+
+
+.fmrow .control__indicator{
+	top:8px;
+}
+
+.malnd {
+    padding-top: 0px;
+}
+
+
+/*captacha responsive code*/
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #F7941E transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+	    text-align: left;
+}
+
+.infospan .text-center{
+	text-align:center !important;
+}
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+	text-align: left;
+    width: 151px;
+    /*background-color: #555;*/
+	    background: #F7941E;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+		font-size: 12px;
+    padding: 10px;
+    opacity: 9;
+    transition:  1s;
+	
+
+}
+
+
+
+

@@ -1,0 +1,144 @@
+/*
+Theme Name: Personal lite
+Author: Ponvendhan	
+Description: Personal is a simple lite weight, minimal, responsive, elegant theme for personal bloggers. Full width content feature gives a vast place to show content to website reader.
+Version: 1.0.11
+Tags: blog, one-column, custom-menu, custom-background, custom-logo, featured-images, theme-options, footer-widgets, sticky-post, threaded-comments	
+Text Domain: personal-lite
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html 
+*/
+
+body{background-color: #778899;font-family: 'Titillium Web', sans-serif !important;-ms-word-wrap: break-word;
+word-wrap: break-word;}
+a:hover {text-decoration: none;}
+
+.logo {text-align: center;color: #fff;margin: 25px 0;margin-top: 50px;}
+.logo h1 {font-size: 45px; font-weight: 400;}
+.logo h1 a {color: white; text-decoration: none;font-family: 'Sonsie One', cursive;}
+.logo h1 a:hover {color: white; text-decoration: none;}
+.logo p.site-title a {color: white; text-decoration: none;font-family: 'Sonsie One', cursive;font-size: 45px;}
+.logo p.site-title a:hover{color: white; text-decoration: none;}
+.center-nav {text-align: center;}
+.navigation {display: inline-block; text-align: center;border: 1px solid #aaa;border-radius: 6px;padding: 10px 25px 10px 40px;background: #34495E;}
+.navigation ul{margin: 0; padding: 0;}
+.navigation ul li {float: left;padding-right: 20px;list-style: none;}
+.navigation ul li a{color: white;font-size: 15px;}
+.navigation ul li a:hover {color: #f9f9f9;}
+.navi li {position: relative;}
+.navi li ul {position: absolute;display: none;top: 100%;left: 0;z-index: 99;background: #34495E;padding: 15px 0px 20px 15px;}
+.navi li ul li {padding: 10px 0px 0px 0px;float: left;display: block;min-width: 150px;}
+.navi li ul li a{float: left;display: block;width: 100%;text-align: left;}
+.navi li ul li:hover {}
+.navi li:hover>ul {display: block;}
+.navi li ul li ul {position: absolute;left: 150px;top: 0px;}
+.slicknav_menu {display: none;}
+.archive-head {background: white; text-align: center;margin: 30px 0;padding: 1px 0 10px 0;}
+.content-index {margin-top: 30px;}
+.content-index img{max-width: 100%;height: auto;}
+.size-index-thumb {width: 100%;height: auto;border-radius: 10px 10px 0 0;}
+.single-index{margin-bottom: 40px;}
+.single-index-meta{background-color: white;padding: 20px 18px;}
+.single-index-meta .single-header h1, .single-index-meta .single-header h2{margin-top: 0; margin-bottom: 30px;text-align: center;font-size: 33px;}
+.single-index-meta a{color: #444; }
+.single-index-meta p{font-size: 17px;color: #555;line-height: 29px;}
+.single-index-meta i{margin-right: 10px;}
+
+.singlemeta-index {text-align: center; margin-bottom: 15px; font-size: 16px;color: #bbb;}
+.singlemeta-index span {margin-right: 10px;margin-left: 10px;}
+.singlemeta-index hr{width: 150px;    color: #bbb !important;border-top: 1px solid !important;}
+.singlemeta-index a{color: #bbb;}
+.singlemeta-index a:hover{color: #aaa;}
+.single-content p{margin-bottom: 30px;}
+.single-content {margin-bottom: 60px;}
+.single-content a{color: #4B9BD7;}
+.single-tags {margin-bottom: 20px;}
+.single-tags span{float: left; line-height: 25px;}
+.single-tags a{background: #e9e9e9; padding: 0px 10px;margin: 5px;border-radius: 3px;float: left;color: #4B9BD7;}
+.single-postnav {margin-bottom: 30px;color: #fff;}
+.single-solo .single-postnav {margin-bottom: 20px;color: #fff;}
+.single-postnav a{color: #fff;font-size: 20px;}
+.previous-post {text-align: right;}
+.single-solo .single-postnav a{color: #444;font-size: 14px;}
+.single-solo .single-postnav i{color: #444; font-size:14px;}
+.single-solo hr{margin-top: 10px !important;}
+.readmore-a {text-align: center;margin: 30px 0 20px 0;}
+.readmore-a a{border: 1px solid #bbb;padding: 10px 20px;color: #4444;font-weight: 600;border-radius: 10px;}
+
+.comment-title p{float: left;font-size: 20px;padding: 0 10px 0 0;}
+.comment-title hr{margin: 16px 0;}
+.comment-box input{width: 100%;height: 40px; padding: 10px 20px;margin-left: 0;margin-bottom: 20px;border: 1px solid #a9a9a9;}
+.comment-box textarea{width: 100%;margin-top: 30px; height: 250px;margin-bottom: 20px;border: 1px solid #a9a9a9;}
+.comment-textbox textarea{width: 100%;min-height: 200px;margin-bottom: 20px;border: 1px solid #a9a9a9;}
+.comment-form input[type="submit"] {padding: 10px 30px;background:#4B9BD7;border: none;box-shadow: 5px 5px 5px grey;color: white;font-size: 19px;}
+.comments ol{list-style: none;padding: 0;}
+.comment {margin: 15px 0 30px 0;}
+.comment-author img{float: left;border: 2px solid #f1f1f1;padding: 2px;}
+.comment-content {margin-left: 85px;}
+.comment-meta a{font-weight: 500;font-size: 18px;text-decoration: none;font-style: normal;color: #4C4C4C;padding: 0;}
+.comment-meta p {color: #d0d0d0;}
+.comment-text {margin-bottom: 20px;margin-top: 20px;}
+.comment-reply-link{text-decoration: none;color: #d0d0d0 !important;}
+.comment-reply-link:hover {text-decoration: underline;color: #d0d0d0;}
+.comments ol ul li, .comments ol li ul li {list-style: none;}
+.comments .w-title {font-size: 20px;}
+.comment-notes, .logged-in-as{font-size: 13px !important;}
+.comment-notes .required, .comment-box .required{color: red;}
+.bypostauthor {background: #fbfbfb; padding: 10px;border: 1px solid #eee;}
+
+/*####### 404 page #######*/
+.not-found{text-align: center;margin-bottom: 30px;}
+.content-align-center {margin-bottom: 100px;}
+.content-align-center form {margin-top: 30px;margin-bottom: 80px; }
+.content-align-center input[type="text"]{width: 290px;border-radius: 6px 0px 0px 6px;border: 1px solid #a9a9a9;line-height: 30px;}
+.content-align-center input[type="submit"]{line-height: 30px;background: orange;border-color: orange;color: white;font-weight: bold;padding: 0px 30px;}
+.not-found ul li, .not-found li{list-style: none;}
+.not-found a{font-size: 15px; color: #4B9BD7;}
+.not-found .widget {margin-bottom: 60px;}
+.not-found .widget_tag_cloud{margin-top: 70px;}
+.not-found .widget_tag_cloud a {padding: 0 6px;}
+
+
+/*####### standard WordPress css requirements #######*/
+.wp-caption {background: #FAFAFA;padding: 5px;border:1px solid #eee;border-radius: 3px;max-width: 100%;}
+.wp-caption-text{font-size: 13px !important;margin: 0 !important;text-align: center;}
+.alignright {background: #FAFAFA;padding: 5px;border:1px solid #eee;border-radius: 3px;float: right;margin: 5px 0 10px 15px;}
+.alignleft {background: #FAFAFA;padding: 5px;border:1px solid #eee;border-radius: 3px;float: left;margin: 5px 15px 10px 0px;}
+.aligncenter {background: #FAFAFA;padding: 5px;border:1px solid #eee;border-radius: 3px;margin: 15px auto;}/* Text meant only for screen readers. */
+.screen-reader-text {clip: rect(1px, 1px, 1px, 1px);position: absolute !important;height: 1px;width: 1px;overflow: hidden;}
+.screen-reader-text:focus {background-color: #f1f1f1;border-radius: 3px;box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);clip: auto !important;color: #21759b;display: block;font-size: 14px;font-size: 0.875rem;font-weight: bold;height: auto;left: 5px;line-height: normal;padding: 15px 23px 14px;text-decoration: none;top: 5px;width: auto;z-index: 100000;}
+.gallery-caption {}
+.sticky{border: 3px solid orange;border-radius: 10px 10px 0 0;}
+
+/*####### Sidebar #######*/
+.widget {margin: 30px 0;}
+
+
+.footer {background: #424251;padding: 30px 0;}
+.footer h3{margin-bottom: 20px; color: #fff;}
+.footer-single {color: #dadada; font-weight: 600;}
+.footer-single p{font-size: 15px;font-weight: normal;}
+.footer-widget{margin-bottom: 60px;}
+.footer ul {margin: 0;padding: 0;}
+.footer ul li{list-style: none;margin-bottom: 15px;}
+.footer ul li a{color: #dadada;font-weight: normal;line-height: 20px;font-size: 15px;font-style: italic;}
+.footer input#searchsubmit {background: orange;border: 2px solid orange;color: white;width: 80px;}
+.footer input {color: #777;}
+.credit-footer {background: #222; padding: 15px 0 5px 0;}
+.credit-footer p{color: #dadada;font-size: 17px;font-family: monospace;}
+.credit-footer a{color: #dadada;font-size: 17px;font-style: normal;font-weight: bold;}
+.footer-right p{text-align: right;}
+
+
+@media only screen and (min-width: 1px) and (max-width: 1170px) {
+	.site-head{display: none;}
+	#menu {display:none;}	
+	.slicknav_menu {display:block;}
+	.content-align-center input[type="text"]{width: 200px !important;}
+	.credit-footer p {text-align: center !important;}
+}	
+
+@media (min-width: 1000px) {
+	.credit-footer p {text-align: inherit !important;}
+	.footer-right {text-align: right !important;}
+}

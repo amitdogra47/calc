@@ -1,0 +1,36 @@
+/*
+Styles for Price Wizard plugin
+*/
+
+/* basic styles */
+#mypriceguide img{	border:0px solid white;-webkit-box-shadow: 0px 0px 0px 0px rgba(0, , 0, 0.5);box-shadow:  0px 0px 0px 0px rgba(0, , 0, 0.5);}
+
+/* layout of the prospect details */
+#mypriceguide input.myschool[type='text'] {
+	width: 400px;
+}
+#mypriceguide input.myname[type='text'] {
+	width: 400px;
+}
+#mypriceguide input.myemail[type='text'] {
+	width: 400px;
+}
+#mypriceguide input.myphone[type='text'] {
+	width: 200px;
+}
+
+/* layut for validation errors */
+div.rsvErrors1{background-color: #FFFFCC;border: 1px solid red;}
+div.rsvErrors1 h4{margin: 5px;}
+div.rsvErrors1 ol li {list-style-type: disc;margin-left: 20px;}
+div.rsvErrors1 {display: none}
+
+/* general settings */
+.wizard_text {
+line-height:150% !important;
+}
+.wizard_header{
+font-size:16px !important;
+font-weight:bold !important;
+padding-left:10px !important;
+}

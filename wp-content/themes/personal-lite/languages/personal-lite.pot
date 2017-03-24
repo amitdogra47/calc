@@ -1,0 +1,219 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-05 05:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: 404.php:11
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for"
+msgstr ""
+
+#: 404.php:13
+msgid ""
+"please get your desired article through the search box or below navigational "
+"links"
+msgstr ""
+
+#: archive.php:34 author.php:29 index.php:35 single.php:24
+msgid "Post a Comment"
+msgstr ""
+
+#: archive.php:34 author.php:29 index.php:35 single.php:24
+msgid "1 Comment"
+msgstr ""
+
+#: archive.php:34 author.php:29 index.php:35 single.php:24
+msgid "% Comments"
+msgstr ""
+
+#: archive.php:34 author.php:29 index.php:35 single.php:24
+msgid "Comments are Closed"
+msgstr ""
+
+#: archive.php:40 author.php:35 index.php:41
+msgid "Read more"
+msgstr ""
+
+#: archive.php:48 author.php:43 index.php:49
+msgid "<i class=\"fa fa-chevron-circle-left\"></i> Older posts"
+msgstr ""
+
+#: archive.php:49 author.php:44 index.php:50
+msgid "Recent posts <i class=\"fa fa-chevron-circle-right\"></i>"
+msgstr ""
+
+#: comments.php:26
+msgid "You have to enter post password to view comments"
+msgstr ""
+
+#. %s: post title
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#. 1: number of comments, 2: post title
+#: comments.php:45
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:78
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:79
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:87
+msgid "Comments are closed"
+msgstr ""
+
+#: comments.php:98
+msgid "Submit comment"
+msgstr ""
+
+#: comments.php:100
+msgid "Want to say something? Post a comment"
+msgstr ""
+
+#: comments.php:104 comments.php:127
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: comments.php:110
+msgid "Name"
+msgstr ""
+
+#: comments.php:115
+msgid "Email"
+msgstr ""
+
+#: comments.php:121
+msgid "Website"
+msgstr ""
+
+#: footer.php:27
+msgid "Copyright  &copy; "
+msgstr ""
+
+#: footer.php:30
+msgid "powered by: "
+msgstr ""
+
+#: footer.php:30
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:77
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:161
+msgid "Footer Widget One"
+msgstr ""
+
+#: functions.php:163
+msgid "Place your left footer widgets here."
+msgstr ""
+
+#: functions.php:170
+msgid "Footer Widget two"
+msgstr ""
+
+#: functions.php:172
+msgid "Place your center footer widgets here."
+msgstr ""
+
+#: functions.php:179
+msgid "Footer Widget three"
+msgstr ""
+
+#: functions.php:181
+msgid "Place your right footer widgets here."
+msgstr ""
+
+#: page.php:20 single.php:29
+msgid "Tags : "
+msgstr ""
+
+#: inc/personal-customizer.php:13
+msgid "Theme Options"
+msgstr ""
+
+#: inc/personal-customizer.php:23
+msgid "Homepage"
+msgstr ""
+
+#: inc/personal-customizer.php:33
+msgid "Do you wish to show image thumbnail on homepage"
+msgstr ""
+
+#: inc/personal-customizer.php:37 inc/personal-customizer.php:49
+#: inc/personal-customizer.php:61 inc/personal-customizer.php:80
+#: inc/personal-customizer.php:92 inc/personal-customizer.php:104
+#: inc/personal-customizer.php:114
+msgid "Enable"
+msgstr ""
+
+#: inc/personal-customizer.php:37 inc/personal-customizer.php:49
+#: inc/personal-customizer.php:61 inc/personal-customizer.php:80
+#: inc/personal-customizer.php:92 inc/personal-customizer.php:104
+#: inc/personal-customizer.php:115
+msgid "Disable"
+msgstr ""
+
+#: inc/personal-customizer.php:45
+msgid "Show post info"
+msgstr ""
+
+#: inc/personal-customizer.php:57
+msgid "Show Read More Link?"
+msgstr ""
+
+#: inc/personal-customizer.php:66
+msgid "Single Post options"
+msgstr ""
+
+#: inc/personal-customizer.php:76
+msgid "Image thumbnail on top?"
+msgstr ""
+
+#: inc/personal-customizer.php:88
+msgid "Show post meta info"
+msgstr ""
+
+#: inc/personal-customizer.php:100
+msgid "Post navigation"
+msgstr ""
+
+#. Name of the theme
+msgid "Personal lite"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Personal is a simple lite weight, minimal, responsive, elegant theme for "
+"personal bloggers. Full width content feature gives a vast place to show "
+"content to website reader."
+msgstr ""
+
+#. Author of the theme
+msgid "Ponvendhan"
+msgstr ""
